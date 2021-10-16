@@ -21,4 +21,4 @@
 ### 1. Creating a pod (example)
 Create the YAML for a single pod that uses the nginx image and exposes port 80 from the container
 
-[]()
+[pod.yml](https://github.com/chadmcrowell/cka/blob/main/01-cluster-architecture/pod.yml)
