@@ -16,11 +16,9 @@
 
 ## Challenges
 
-> Please complete the following challenges by inserting a code block below. The first challenge is an example, and the rest are to be completed by you. Clone this repository and create a new branch. Once you are finished solving the challenges, create a pull request.
+> Please complete the following challenges by inserting a new file (YAML or SH) and insert the link to that file below the question. The first challenge is an example, and the rest are to be completed by you. Clone this repository and create a new branch. Once you are finished solving the challenges, create a pull request.
 
 ### 1. Creating a pod (example)
 Create the YAML for a single pod that uses the nginx image and exposes port 80 from the container
 
-```yaml
-
-```
+[]()
