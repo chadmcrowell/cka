@@ -23,9 +23,9 @@ Create the YAML for a single pod that uses the nginx image and exposes port 80 f
 
 [pod.yml](https://github.com/chadmcrowell/cka/blob/main/01-cluster-architecture/pod.yml)
 
-> ...
+>>>
 
 ### 2. Change the api server certificate
 Using kubeadm, you've generated a new server certificate for your cluster API named `apiserver.crt`. Use your knowledge of the Kubernetes PKI infrastructure and locate the apiserver.crt file. Copy the file into this directory.
 
-> ...
+>>>
