@@ -2,7 +2,12 @@
 
 <img src="https://github.com/kubernetes/kubernetes/raw/master/logo/logo.png" width="100">
 
-----
+## Table of contents
+
+- [Objectives](#objectives)
+- [Challenges](#challenges)
+
+---
 
 ## Objectives
 * Manage role based access control (RBAC)
@@ -25,7 +30,31 @@ Create the YAML for a single pod that uses the nginx image and exposes port 80 f
 
 🔹
 
-### 2. Change the api server certificate
+### 2. Get the API server certificate
 Using kubeadm, you've generated a new server certificate for your cluster API named `apiserver.crt`. Use your knowledge of the Kubernetes PKI infrastructure and locate the apiserver.crt file. Copy the file into this directory.
 
 🔹
+
+### 3. Authenticate to the API
+You are trying to access the cluster to retrive pod information, but you are receiving the following error:
+```bash
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+```
+Specify the `kubectl` command you can issue that will verify if your certificate is valid. Paste the command here (inside the code block):
+
+```bash
+
+```
+
+🔹
+
+### 4. Join nodes to a cluster
+You need to add an additional node to your Kubernetes cluster using `kubeadm`. Specify the `kubeadm` commands required to add the node successfully and paste them here (inside the code block):
+
+```bash
+
+```
+
+🔹
+
+### 5. 
