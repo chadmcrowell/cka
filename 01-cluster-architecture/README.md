@@ -57,4 +57,14 @@ You need to add an additional node to your Kubernetes cluster using `kubeadm`. S
 
 🔹
 
-### 5. 
+### 5. New User Authentication
+John is a new member of your team, and he needs to access the API using kubectl, but only to view and list pods in the default namespace. Create a new kubeconfig for this user and apply the appropriate `role` and `roleBinding`. Copy the kubeconfig and two yaml files in this directory.
+
+
+---
+
+## Resources
+
+- [Certifik8s: All You Need to Know about Certificates in Kubernetes](https://youtu.be/gXz4cq3PKdg)
+- [Provisioning a CA and Generating TLS Certificates: Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/04-certificate-authority.md)
+- 
