@@ -59,18 +59,14 @@ echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https:/
 # Update the apt package index
 sudo apt-get update
 
-# Install the 19.03.4 version of Docker Engine - Community
-sudo apt-get install -y containerd.io docker-ce=5:20.10.6~3-0~ubuntu-$(lsb_release -cs)
-
 # Install kubelet, kubeadm and kubectl packages
 sudo apt-get install -y kubelet=1.21.0-00 kubeadm=1.21.0-00 kubectl=1.21.0-00
 
 # hold package versions
 sudo apt-mark hold kubelet kubeadm kubectl
 
-
-# download flannel config
+# download weavenet config
 sudo wget -O /root/weavenet.yml "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 
 # download init script for control plane node
-sudo wget -O /home/azureuser/k8s-initialize-cluster.sh https://raw.githubusercontent.com/chadmcrowell/k8s-from-scratch/main/week2/k8s-initialize-cluster.sh
+sudo wget -O /home/azureuser/initialize-cluster.sh https://raw.githubusercontent.com/chadmcrowell/cka/main/00-prerequisites/initialize-cluster.sh
