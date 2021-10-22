@@ -66,7 +66,7 @@ sudo apt-get install -y kubelet=1.21.0-00 kubeadm=1.21.0-00 kubectl=1.21.0-00
 sudo apt-mark hold kubelet kubeadm kubectl
 
 # download weavenet config
-sudo wget -O /root/weavenet.yml "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+sudo wget -O /home/azureuser/weavenet.yml "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 
 # download init script for control plane node
 sudo wget -O /home/azureuser/initialize-cluster.sh https://raw.githubusercontent.com/chadmcrowell/cka/main/00-prerequisites/initialize-cluster.sh

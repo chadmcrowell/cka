@@ -24,7 +24,7 @@ ssh azureuser@$NODE0
 # copy join command and login to node1
 ssh azureuser@$NODE1
 
-sudo kubeadm join
+sudo <paste join command here>
 
 ```
 
