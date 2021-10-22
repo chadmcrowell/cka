@@ -305,7 +305,7 @@
                     "fileUris": [
                         "https://raw.githubusercontent.com/chadmcrowell/cka/main/00-prerequisites/install-k8s.sh"
                     ],
-                    "commandToExecute": "sh install-k8s-v1.20.sh"
+                    "commandToExecute": "sh install-k8s.sh"
                 }
             }
         },
@@ -379,7 +379,7 @@
                     "fileUris": [
                         "https://raw.githubusercontent.com/chadmcrowell/cka/main/00-prerequisites/install-k8s.sh"
                     ],
-                    "commandToExecute": "sh install-k8s-v1.20.sh"
+                    "commandToExecute": "sh install-k8s.sh"
                 }
             }
         }
