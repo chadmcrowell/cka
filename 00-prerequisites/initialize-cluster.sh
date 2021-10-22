@@ -7,4 +7,4 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown azureuser:azureuser $HOME/.kube/config
 
 # apply the cni
-kubectl apply -f /root/weavenet.yml
+kubectl apply -f /home/azureuser/weavenet.yml
