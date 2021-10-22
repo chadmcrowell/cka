@@ -70,3 +70,5 @@ sudo wget -O /root/weavenet.yml "https://cloud.weave.works/k8s/net?k8s-version=$
 
 # download init script for control plane node
 sudo wget -O /home/azureuser/initialize-cluster.sh https://raw.githubusercontent.com/chadmcrowell/cka/main/00-prerequisites/initialize-cluster.sh
+
+sudo chmod +x /home/azureuser/initialize-cluster.sh
