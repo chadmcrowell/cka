@@ -22,7 +22,7 @@
 
 ## Challenges
 
-> Please complete the following challenges by inserting a new file (YAML or SH) and insert the link to that file below the question. The first challenge is an example, and the rest are to be completed by you. Clone this repository and create a new branch. Once you are finished solving the challenges, create a pull request.
+> Please complete the following challenges by creating a new file (YAML or SH) and insert the link to that file below the question. The first challenge is an example, and the rest are to be completed by you. Clone this repository and create a new branch. Once you are finished solving the challenges, create a pull request.
 
 ### 1. Creating a pod (example)
 Create the YAML for a single pod that uses the nginx image and exposes port 80 from the container
@@ -79,3 +79,4 @@ You've found a CVE in your cluster and you need to upgrade the cluster from 1.18
 - [Provisioning a CA and Generating TLS Certificates: Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/04-certificate-authority.md)
 - [Setup Kubernetes Cluster using kubeadm on Ubuntu 20.04](https://youtu.be/mMmxMoprxiY)
 - [Creating a cluster with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
+- [Upgrade Kubernetes](https://youtu.be/_Z_n5jw9cUg)
