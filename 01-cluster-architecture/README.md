@@ -65,11 +65,14 @@ John is a new member of your team, and he needs to access the API using kubectl,
 🔹
 
 ### 6. Upgrading Kubernetes
-You've found a CVE in your cluster and you need to upgrade the cluster from 1.18.0 to 1.19.0. Using [this cluster](https://www.katacoda.com/courses/kubernetes/playground), upgrade all the kubernetes components to 1.19.0 and paste the commands you used below.
+You've found a CVE in your cluster and you need to upgrade the cluster from 1.18.0 to 1.19.0. Using [this cluster](https://www.katacoda.com/courses/kubernetes/playground), upgrade all the kubernetes components to 1.19.0 and paste the commands you used into a new file named `upgrade-k8s.sh`.
 
-```bash
+🔹
 
-```
+### 7. Decommission and Join Nodes
+You've found that the performance of one of the nodes in your cluster is degraded, this is because the NIC needs to be replaced. In order to prevent downtime of applications running on your cluster, you want to add a node to your cluster, then safely drain the existing nodes to schedule them safely to the new node. Use the cluster you created [here](https://github.com/chadmcrowell/cka/tree/main/00-prerequisites) and paste the commands into a new script file named `join-nodes.sh`. 
+
+🔹
 
 ---
 
