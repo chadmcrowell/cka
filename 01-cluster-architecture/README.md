@@ -6,6 +6,7 @@
 
 - [Objectives](#objectives)
 - [Challenges](#challenges)
+- [Resources](#resources)
 
 ---
 
@@ -61,10 +62,20 @@ You need to add an additional node to your Kubernetes cluster using `kubeadm`. S
 John is a new member of your team, and he needs to access the API using kubectl, but only to view and list pods in the default namespace. Create a new kubeconfig for this user and apply the appropriate `role` and `roleBinding`. Copy the kubeconfig and two yaml files in this directory.
 
 
+🔹
+
+### 6. Upgrading Kubernetes
+You've found a CVE in your cluster and you need to upgrade the cluster from 1.18.0 to 1.19.0. Using [this cluster](https://www.katacoda.com/courses/kubernetes/playground), upgrade all the kubernetes components to 1.19.0 and paste the commands you used below.
+
+```bash
+
+```
+
 ---
 
 ## Resources
 
 - [Certifik8s: All You Need to Know about Certificates in Kubernetes](https://youtu.be/gXz4cq3PKdg)
 - [Provisioning a CA and Generating TLS Certificates: Kubernetes the Hard Way](https://github.com/kelseyhightower/kubernetes-the-hard-way/blob/master/docs/04-certificate-authority.md)
-- 
+- [Setup Kubernetes Cluster using kubeadm on Ubuntu 20.04](https://youtu.be/mMmxMoprxiY)
+- [Creating a cluster with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
