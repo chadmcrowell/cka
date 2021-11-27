@@ -83,3 +83,6 @@ You've found that the performance of one of the nodes in your cluster is degrade
 - [Setup Kubernetes Cluster using kubeadm on Ubuntu 20.04](https://youtu.be/mMmxMoprxiY)
 - [Creating a cluster with kubeadm](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/create-cluster-kubeadm/)
 - [Upgrade Kubernetes](https://youtu.be/_Z_n5jw9cUg)
+- [Creating a kubernetes cluster on Digital Ocean](https://youtu.be/glFE28QT1HI?t=702)
+- [deploy k8s on CIVO](https://www.civo.com/?utm_source=google&utm_medium=googleads&utm_campaign=googleadsPureBrandWorld&keyword=civo&gclid=CjwKCAjwoP6LBhBlEiwAvCcthLsoFdB1ZlX4qZj2UW4hc-RpZY3SBB9lsfN9UPWlfiK3AydfRQpDhxoCrVQQAvD_BwE)
+- 
