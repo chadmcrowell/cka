@@ -21,6 +21,11 @@ ssh azureuser@$NODE0
 # from SSH session on node0
 ./initialize-cluster.sh
 
+# copy and chmod on kubeconfig into .kube
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
 # copy join command and login to node1
 ssh azureuser@$NODE1
 
