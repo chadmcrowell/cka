@@ -74,6 +74,12 @@ You've found that the performance of one of the nodes in your cluster is degrade
 
 🔹
 
+### 8. Backup etcd
+In order to ensure all configuration data is backed up in Kuberetes, you must perform a backup of etcd. Perform a backup using the `etcdctl` tool and store it in `/opt/etcd-backup/` and name the file `etcd-backup.db`. List the contents of the directory below and also verify the snapshot status using the command `etcdctl snapshot status` and past the output below.
+
+🔹
+
+
 ---
 
 ## Resources
