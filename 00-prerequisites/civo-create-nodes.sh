@@ -5,9 +5,15 @@
 
 # civo apikey add my_key $API_KEY
 
-civo instance create --size g3.small --diskimage ubuntu-focal --sshkey chad --initialuser root --hostname k8s0 --wait
+# civo instance create --size g3.small --diskimage ubuntu-focal --sshkey chad --initialuser root --hostname k8s0 --wait
+civo instance create --size g3.medium --diskimage ubuntu-focal --initialuser ubuntu --hostname k8s0 --wait
 
-civo instance create --size g3.small --diskimage ubuntu-focal --sshkey chad --initialuser root --hostname k8s1 --wait
+civo instance password k8s0
+
+# civo instance create --size g3.small --diskimage ubuntu-focal --sshkey chad --initialuser root --hostname k8s1 --wait
+civo instance create --size g3.medium --diskimage ubuntu-focal --initialuser ubuntu --hostname k8s1 --wait
+
+civo instance password k8s1
 
 civo instance show k8s0 | grep "Public IP"
 
