@@ -5,6 +5,8 @@
 
 # Designed for Ubuntu 20.04 LTS
 
+KUBE_VERSION=1.22.2
+
 # disable swapoff
 sudo swapoff -a
 
@@ -60,7 +62,7 @@ echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https:/
 sudo apt-get update
 
 # Install kubelet, kubeadm and kubectl packages
-sudo apt-get install -y kubelet=1.21.0-00 kubeadm=1.21.0-00 kubectl=1.21.0-00
+sudo apt-get install -y kubelet=${KUBE_VERSION}-00 kubeadm=${KUBE_VERSION}-00 kubectl=${KUBE_VERSION}-00
 
 # hold package versions
 sudo apt-mark hold kubelet kubeadm kubectl
