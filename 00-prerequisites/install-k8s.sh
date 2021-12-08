@@ -68,7 +68,8 @@ sudo apt-get install -y kubelet=${KUBE_VERSION}-00 kubeadm=${KUBE_VERSION}-00 ku
 sudo apt-mark hold kubelet kubeadm kubectl
 
 # download weavenet config
-sudo wget -O ${HOME}/weavenet.yml "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+sudo wget -O ${HOME}/weave.yaml "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
+sed -i 's/ghcr.io\/weaveworks\/launcher/docker.io\/weaveworks/g' ${HOME}/weave.yaml
 
 # download init script for control plane node
 sudo wget -O ${HOME}/initialize-cluster.sh https://raw.githubusercontent.com/chadmcrowell/cka/main/00-prerequisites/initialize-cluster.sh

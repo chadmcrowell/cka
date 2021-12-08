@@ -1,10 +1,17 @@
 # initialize the cluster
-sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+rm /root/.kube/config
+kubeadm init --kubernetes-version=${KUBE_VERSION} --ignore-preflight-errors=NumCPU --skip-token-print
 
 # set config and permissions
-mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown azureuser:azureuser $HOME/.kube/config
+mkdir -p ~/.kube
+sudo cp -i /etc/kubernetes/admin.conf ~/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 # apply the cni
-kubectl apply -f /home/azureuser/weavenet.yml
+# workaround due to: https://github.com/weaveworks/weave/issues/3927
+kubectl apply -f ${HOME}/weave.yaml
+rm weave.yaml
+
+echo
+echo "### COPY AND PASTE THIS IN THE WORKER NODE ###"
+kubeadm token create --print-join-command --ttl 0
