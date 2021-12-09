@@ -19,6 +19,6 @@ civo instance show k8s0 | grep "Public IP"
 
 civo instance show k8s1 | grep "Public IP"
 
-EDMHQEWaSX
+# Z&4XgitJbZ
 
-JeWLam@SoW
+# r8&FKNcdEQ
