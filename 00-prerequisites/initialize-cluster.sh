@@ -1,6 +1,8 @@
+KUBE_VERSION=1.22.2
+
 # initialize the cluster
-rm /root/.kube/config
-kubeadm init --kubernetes-version=${KUBE_VERSION} --ignore-preflight-errors=NumCPU --skip-token-print
+sudo rm /root/.kube/config
+sudo kubeadm init --kubernetes-version=${KUBE_VERSION} --ignore-preflight-errors=NumCPU --skip-token-print
 
 # set config and permissions
 mkdir -p ~/.kube
@@ -14,4 +16,4 @@ rm weave.yaml
 
 echo
 echo "### COPY AND PASTE THIS IN THE WORKER NODE ###"
-kubeadm token create --print-join-command --ttl 0
+sudo kubeadm token create --print-join-command --ttl 0
