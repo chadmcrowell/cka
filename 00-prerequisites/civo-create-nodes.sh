@@ -18,7 +18,3 @@ civo instance password k8s1
 civo instance show k8s0 | grep "Public IP"
 
 civo instance show k8s1 | grep "Public IP"
-
-# Z&4XgitJbZ
-
-# r8&FKNcdEQ
