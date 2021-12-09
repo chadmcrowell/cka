@@ -1,7 +1,7 @@
 KUBE_VERSION=1.22.2
 
 # initialize the cluster
-sudo rm /root/.kube/config
+# sudo rm /root/.kube/config
 sudo kubeadm init --kubernetes-version=${KUBE_VERSION} --ignore-preflight-errors=NumCPU --skip-token-print
 
 # set config and permissions
