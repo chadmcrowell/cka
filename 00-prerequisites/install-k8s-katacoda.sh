@@ -15,13 +15,24 @@ net.bridge.bridge-nf-call-iptables = 1
 net.ipv4.ip_forward = 1
 EOF
 sysctl --system
+sudo tee /etc/modules-load.d/containerd.conf <<EOF
+overlay
+br_netfilter
+EOF
 sudo tee /etc/sysctl.d/kubernetes.conf<<EOF
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 net.ipv4.ip_forward = 1
 EOF
 sysctl --system
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 sudo apt update
+sudo apt install -y containerd.io
+mkdir -p /etc/containerd
+containerd config default>/etc/containerd/config.toml
+sudo systemctl restart containerd
+sudo systemctl enable containerd
 sudo systemctl enable kubelet
 sudo kubeadm config images pull --cri-socket /run/containerd/containerd.sock --kubernetes-version v1.22.0
 sudo kubeadm init   --pod-network-cidr=192.168.0.0/16   --upload-certs --kubernetes-version=v1.22.0  --control-plane-endpoint=host01 --ignore-preflight-errors=Mem  --cri-socket /run/containerd/containerd.sock
